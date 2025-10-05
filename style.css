@@ -1,0 +1,243 @@
+:root {
+    --primary-white: #ffffff;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #6c757d;
+    --text-dark: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+    padding-bottom: 60px;
+}
+
+.container {
+    max-width: 100%;
+    padding: 15px;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: var(--primary-white);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: var(--primary-white);
+    border-bottom: 1px solid var(--medium-gray);
+    padding: 15px 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid var(--medium-gray);
+    padding: 10px 15px;
+    background-color: var(--primary-white);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #4dabf7;
+    box-shadow: 0 0 0 0.25rem rgba(77, 171, 247, 0.25);
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #4dabf7;
+    border-color: #4dabf7;
+}
+
+.btn-primary:hover {
+    background-color: #339af0;
+    border-color: #339af0;
+}
+
+.btn-success {
+    background-color: #51cf66;
+    border-color: #51cf66;
+}
+
+.btn-success:hover {
+    background-color: #40c057;
+    border-color: #40c057;
+}
+
+.invoice-container {
+    background-color: var(--primary-white);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.invoice-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--medium-gray);
+    padding-bottom: 15px;
+}
+
+.invoice-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.invoice-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.invoice-detail-item {
+    margin-bottom: 8px;
+}
+
+.invoice-detail-label {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.invoice-table th, .invoice-table td {
+    padding: 8px 5px;
+    text-align: left;
+    border-bottom: 1px solid var(--medium-gray);
+    font-size: 0.9rem;
+}
+
+.invoice-table th {
+    font-weight: 600;
+    background-color: var(--light-gray);
+}
+
+.invoice-footer {
+    border-top: 1px solid var(--medium-gray);
+    padding-top: 15px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.item-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.remove-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove-btn:hover {
+    background-color: #fa5252;
+}
+
+.add-item-btn {
+    background-color: #339af0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin-top: 10px;
+}
+
+.add-item-btn:hover {
+    background-color: #228be6;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--dark-gray);
+    background-color: var(--primary-white);
+    padding: 8px;
+    border-top: 1px solid var(--medium-gray);
+}
+
+.preview-container {
+    display: none;
+}
+
+.preview-container.active {
+    display: block;
+}
+
+.form-container {
+    display: block;
+}
+
+.form-container.hidden {
+    display: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo-preview {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.logo-preview img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.logo-upload {
+    flex: 1;
+}
+
+@media (max-width: 576px) {
+    .invoice-details {
+        flex-direction: column;
+    }
+    
+    .invoice-table th, .invoice-table td {
+        padding: 5px 3px;
+        font-size: 0.8rem;
+    }
+}
